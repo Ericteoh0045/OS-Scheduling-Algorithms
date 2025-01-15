@@ -59,7 +59,7 @@ public class MainMenu {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        new RoundRobinGUI();  // Open the Round Robin GUI
+                        new RoundRobinGUI(); // Open the Round Robin GUI
                     }
                 });
             }
@@ -68,21 +68,22 @@ public class MainMenu {
         srtButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Handle SRT button click
-                SwingUtilities.invokeLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        new NonPreemptiveSJFGui();  // Open the Round Robin GUI
-                    }
-                });
+                // Handle SJN button click
+                JOptionPane.showMessageDialog(frame, "SRT Algorithm is under construction.", "SRT",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
         sjnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Handle SJN button click
-                JOptionPane.showMessageDialog(frame, "SJN Algorithm is under construction.", "SJN", JOptionPane.INFORMATION_MESSAGE);
+                // Handle SRT button click
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new NonPreemptiveSJFGui(); // Open the Round Robin GUI
+                    }
+                });
             }
         });
 
@@ -90,7 +91,8 @@ public class MainMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Handle Non-Preemptive Priority button click
-                JOptionPane.showMessageDialog(frame, "Non-Preemptive Priority Algorithm is under construction.", "Non-Preemptive Priority", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "Non-Preemptive Priority Algorithm is under construction.",
+                        "Non-Preemptive Priority", JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
@@ -117,8 +119,7 @@ public class MainMenu {
         button.setForeground(Color.WHITE);
         button.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(new Color(30, 70, 120), 2),
-                BorderFactory.createEmptyBorder(10, 15, 10, 15)
-        ));
+                BorderFactory.createEmptyBorder(10, 15, 10, 15)));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         return button;
     }
