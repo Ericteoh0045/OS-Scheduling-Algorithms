@@ -81,7 +81,7 @@ public class MainMenu {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        new NonPreemptiveSJFGui(); // Open the Round Robin GUI
+                        new NonPreemptiveSJFGui(); // Open the SJN GUI
                     }
                 });
             }
