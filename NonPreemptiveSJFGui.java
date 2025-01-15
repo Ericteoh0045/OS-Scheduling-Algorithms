@@ -33,7 +33,7 @@ public class NonPreemptiveSJFGui extends JFrame {
         add(titlePanel, BorderLayout.NORTH);
 
         // Input panel setup
-        JPanel inputPanel = new JPanel(new GridLayout(0, 1, 10, 10));
+        JPanel inputPanel = new JPanel(new GridLayout(0, 1, 5, 5));
         inputPanel.setBorder(BorderFactory.createEmptyBorder(30, 50, 30, 50));
 
         JTextField processField = new JTextField();
